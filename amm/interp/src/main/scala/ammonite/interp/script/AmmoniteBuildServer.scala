@@ -436,7 +436,7 @@ class AmmoniteBuildServer(
     val classDirectory = compiler.moduleTarget(script).getOrElse(???)
     new ScalacOptionsItem(
       target,
-      (compiler.moduleSettings(script) + "-Ytasty-reader").asJava,
+      ("-Ytasty-reader" :: compiler.moduleSettings(script)).asJava,
       (scriptDependenciesTargets ++ jars ++ extra.map(_.toASCIIString)).asJava,
       classDirectory.toNIO.toAbsolutePath.toUri.toASCIIString
     )
