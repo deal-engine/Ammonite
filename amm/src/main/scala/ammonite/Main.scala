@@ -133,7 +133,7 @@ case class Main(predefCode: String = "",
         storage = storageBackend,
         baseImports = augmentedImports,
         basePredefs = Seq(
-          PredefInfo(Name("ArgsPredef"), argString, false, None)
+          PredefInfo(Name("ArgsPredef"), "interp.configureCompiler(_.settings.processArguments(List(\"-Ytasty-reader\"), true))" + argString, false, None)
         ),
         customPredefs = predefFileInfoOpt.toSeq ++ Seq(
           PredefInfo(Name("CodePredef"), predefCode, false, Some(wd/"(console)"))
