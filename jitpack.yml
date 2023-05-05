@@ -3,3 +3,8 @@ before_install:
   - mkdir -p ~/.m2/
 install:
   - ~/mill -j 0 amm[2.13.10].publishM2Local
+  - ~/mill -j 0 amm._[2.13.10].publishM2Local
+  - ~/mill -j 0 amm.compiler.interface[2.13.10].publishM2Local
+  - ~/mill -j 0 amm.interp.api[2.13.10].publishM2Local
+  - ~/mill -j 0 amm.repl.api[2.13.10].publishM2Local
+  - ~/mill -j 0 terminal[2.13.10].publishM2Local
