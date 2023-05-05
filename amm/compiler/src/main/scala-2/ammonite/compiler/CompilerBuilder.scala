@@ -35,7 +35,7 @@ object CompilerBuilder extends ICompilerBuilder {
       // not 100% sure error collection is correct (duplicates?)
       val errors = new mutable.ListBuffer[String]
       val settings0 = new Settings(err => errors += err)
-      val (_, unparsed) = settings0.processArguments(settings.toList, processAll = true)
+      val (_, unparsed) = settings0.processArguments((settings :+ "-Ytasty-reader").toList, processAll = true)
       for (arg <- unparsed)
         errors += s"Unrecognized argument: $arg"
       // TODO Report the errors via reporter?
