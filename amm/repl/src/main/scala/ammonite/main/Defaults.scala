@@ -17,7 +17,7 @@ object Defaults{
     def ammoniteVersion = ammonite.Constants.version
     def javaVersion = System.getProperty("java.version")
     Util.normalizeNewlines(
-      s"Welcome to the Ammonite Repl $ammoniteVersion (Scala %SCALA_VERSION% Java $javaVersion)"
+      s"Welcome to the Ammonite Repl $ammoniteVersion (Scala %SCALA_VERSION% Java $javaVersion) - Deal Engine Hacked edition UwU"
     )
   }
 

@@ -1,0 +1,11 @@
+before_install:
+  - sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/mill/releases/download/0.10.11/0.10.11) > ~/mill && chmod +x ~/mill'
+  - mkdir -p ~/.m2/
+install:
+  - ~/mill -j 0 amm[3.2.2].publishM2Local
+  - ~/mill -j 0 amm._[3.2.2].publishM2Local
+  - ~/mill -j 0 amm.compiler.interface[3.2.2].publishM2Local
+  - ~/mill -j 0 amm.interp.api[3.2.2].publishM2Local
+  - ~/mill -j 0 amm.repl.api[3.2.2].publishM2Local
+  - ~/mill -j 0 terminal[3.2.2].publishM2Local
+  - ~/mill -j 0 amm.helper[3.2.2].publishM2Local

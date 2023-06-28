@@ -58,7 +58,7 @@ object FullReplAPI {
            .drop(1)
     }
 
-    def print[T: pprint.TPrint](value: => T,
+    def print[T](value: => T,
                                 ident: String,
                                 custom: Option[String])
                                (implicit tcolors: pprint.TPrintColors,
@@ -89,7 +89,7 @@ object FullReplAPI {
         val prefix = new pprint.Truncated(
           Iterator(
             colors().ident()(ident).render, ": ",
-            implicitly[pprint.TPrint[T]].render(tcolors), " = "
+            value.getClass().getName(), " = "
           ),
           pprinter().defaultWidth,
           pprinter().defaultHeight
