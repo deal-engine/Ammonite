@@ -7,7 +7,7 @@ import $file.ci.upload
 import $ivy.`com.lihaoyi::mill-contrib-bloop:$MILL_VERSION`
 import $ivy.`io.get-coursier::coursier-launcher:2.1.0-RC1`
 
-val ghOrg = "com-lihaoyi"
+val ghOrg = "deal-engine"
 val ghRepo = "Ammonite"
 val masterBranch = "main"
 val publishBranches = Seq(masterBranch, "2.x")
@@ -333,7 +333,7 @@ trait AmmModule extends AmmInternalModule with PublishModule{
   def publishVersion = buildVersion
   def pomSettings = PomSettings(
     description = artifactName(),
-    organization = "com.lihaoyi",
+    organization = "com.deal-engine",
     url = s"https://github.com/${ghOrg}/${ghRepo}",
     licenses = Seq(License.MIT),
     versionControl = VersionControl.github(ghOrg, ghRepo),
