@@ -50,9 +50,10 @@ val scala2_13Versions = Seq("2.13.0", "2.13.1", "2.13.2", "2.13.3", "2.13.4", "2
 val scala30Versions = Seq("3.0.0", "3.0.1", "3.0.2")
 val scala31Versions = Seq("3.1.0", "3.1.1", "3.1.2", "3.1.3")
 val scala32Versions = Seq("3.2.0", "3.2.1", "3.2.2")
-val scala3Versions = scala30Versions ++ scala31Versions ++ scala32Versions
+val scala33Versions = Seq("3.3.0", "3.3.1")
+val scala3Versions = scala30Versions ++ scala31Versions ++ scala32Versions ++ scala33Versions
 
-val binCrossScalaVersions = Seq(scala2_12Versions.last, scala2_13Versions.last, scala30Versions.last, scala31Versions.last, scala32Versions.last)
+val binCrossScalaVersions = Seq(scala2_12Versions.last, scala2_13Versions.last, scala30Versions.last, scala31Versions.last, scala32Versions.last, scala33Versions.last)
 def isScala2_12_10OrLater(sv: String): Boolean = {
   (sv.startsWith("2.12.") && sv.stripPrefix("2.12.").length > 1) || (sv.startsWith("2.13.") && sv != "2.13.0")
 }
